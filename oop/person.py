@@ -11,10 +11,20 @@ class Person:
         return self.name == other.name and self.age == other.age
 
 
+class Student(Person):
+    def __init__(self, name, age, course):
+        # super().__init__(name,age)
+        Person.__init__(self, name, age)
+        self.course = course
+
+    def __str__(self):
+        return f"{super().__str__()} - {self.course}"
+
+
 p1 = Person('Bill Gates', 63)
-p2 = Person('Bill Gates', 63)
+s1 = Student('Mike', 23, "MS CS")
 
-print(p1 == p2)  # p1.__eq__(p2)
-print(p1)
+print(s1)
 
-print(p1 > p2)
+print(issubclass(Student, Person))
+print(issubclass(Student, object))
