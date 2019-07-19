@@ -9,7 +9,7 @@ while True:
     if line1 == "" and line2 == "":
         print("Same Content")
         break
-    
+
 
 
 
