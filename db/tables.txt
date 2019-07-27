@@ -1,0 +1,11 @@
+CREATE TABLE publishers (
+    id      INTEGER      PRIMARY KEY AUTOINCREMENT,
+    name    VARCHAR (30) NOT NULL,
+    email   VARCHAR (50) NOT NULL
+                         UNIQUE,
+    contact VARCHAR (30)
+);
+
+
+insert into publishers (name,email,contact)
+ values('Manning','contact@manning.com','95699666,4939339')
